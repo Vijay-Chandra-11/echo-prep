@@ -1129,7 +1129,7 @@ async def generate_test(syllabus: UploadFile = File(...), papers: UploadFile = F
         all_docs = {doc.page_content for doc in (docs_syllabus + docs_papers)}
         context_text = "\n\n".join(all_docs)
 
-        print("Generating test via Gemini...")
+        print("Generating test...")
         llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.0)
         
         # --- NEW EXAM GENERATION PROMPT ---
